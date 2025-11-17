@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background-color: #f9fafb;
+  font-size: 16px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header {
+  background: linear-gradient(135deg, #1e5f96 0%, #2563eb 100%);
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+header .subtitle {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  font-weight: 300;
+}
+.intro {
+  padding: 3rem 0;
+  background: #ffffff;
+}
+.intro .intro-box {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+  border-left: 4px solid #2563eb;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.intro .intro-box h2 {
+  color: #1e5f96;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+.intro .intro-box p {
+  margin-bottom: 1rem;
+  color: #1f2937;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+.intro .intro-box p:last-child {
+  margin-bottom: 0;
+}
+.intro .intro-box .highlight {
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #1e5f96;
+  border: 2px solid #2563eb;
+}
+.propositions {
+  padding: 3rem 0;
+  background: #f9fafb;
+}
+.propositions h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #1e5f96;
+  margin-bottom: 2.5rem;
+}
+.propositions .propositions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.propositions .proposition-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+.propositions .proposition-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.propositions .proposition-card .proposition-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.propositions .proposition-card .proposition-header .proposition-number {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.propositions .proposition-card .proposition-header h3 {
+  color: #1e5f96;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  margin: 0;
+}
+.propositions .proposition-card .proposition-content {
+  margin-bottom: 1.5rem;
+  color: #4b5563;
+  line-height: 1.7;
+}
+.propositions .proposition-card .proposition-actions {
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+.propositions .proposition-card .proposition-actions button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+.propositions .proposition-card .proposition-actions button .icon {
+  font-size: 1.2rem;
+}
+.propositions .proposition-card .proposition-actions button .count {
+  font-weight: 600;
+}
+.propositions .proposition-card .proposition-actions button:hover {
+  transform: scale(1.05);
+}
+.propositions .proposition-card .proposition-actions button.btn-like {
+  color: #10b981;
+}
+.propositions .proposition-card .proposition-actions button.btn-like:hover {
+  background: #d1fae5;
+  border-color: #10b981;
+}
+.propositions .proposition-card .proposition-actions button.btn-like.active {
+  background: #10b981;
+  color: white;
+  border-color: #10b981;
+}
+.propositions .proposition-card .proposition-actions button.btn-dislike {
+  color: #ef4444;
+}
+.propositions .proposition-card .proposition-actions button.btn-dislike:hover {
+  background: #fee2e2;
+  border-color: #ef4444;
+}
+.propositions .proposition-card .proposition-actions button.btn-dislike.active {
+  background: #ef4444;
+  color: white;
+  border-color: #ef4444;
+}
+.contact {
+  padding: 3rem 0;
+  background: #ffffff;
+}
+.contact h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #1e5f96;
+  margin-bottom: 1rem;
+}
+.contact .contact-intro {
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+.contact .contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.contact .contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+.contact .contact-form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+  font-weight: 500;
+}
+.contact .contact-form .form-group input,
+.contact .contact-form .form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+.contact .contact-form .form-group input:focus,
+.contact .contact-form .form-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+.contact .contact-form .form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.contact .contact-form .btn-submit {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.contact .contact-form .btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.contact .contact-form .btn-submit:active {
+  transform: translateY(0);
+}
+.contact .contact-form .form-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  display: none;
+}
+.contact .contact-form .form-message.success {
+  display: block;
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+.contact .contact-form .form-message.error {
+  display: block;
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
+}
+footer {
+  background: #1f2937;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+footer p {
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header .subtitle {
+    font-size: 1rem;
+  }
+  .propositions .propositions-grid {
+    grid-template-columns: 1fr;
+  }
+  .intro .intro-box {
+    padding: 1.5rem;
+  }
+  .contact .contact-form {
+    padding: 1.5rem;
+  }
+}

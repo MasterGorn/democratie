@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Améliorons la Démocratie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Améliorons la Démocratie</h1>
+            <p class="subtitle">Propositions pour une vie politique plus transparente et efficace</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="container">
+                <div class="intro-box">
+                    <h2>Bienvenue</h2>
+                    <p>
+                        Ce site a pour but de mettre en avant des propositions pour améliorer la démocratie. 
+                        Cette initiative est transparente : chaque électeur, quel que soit son parti, peut être 
+                        d'accord avec l'une ou plusieurs de ces propositions.
+                    </p>
+                    <p>
+                        L'objectif est d'améliorer la vie politique dans notre pays et d'inciter les partis 
+                        à intégrer dans leur programme les mesures ayant le plus de succès auprès des citoyens.
+                    </p>
+                    <p class="highlight">
+                        Exprimez votre avis sur chaque proposition en utilisant les boutons "Je suis pour" ou "Je suis contre".
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="propositions">
+            <div class="container">
+                <h2>Les Propositions</h2>
+                <div class="propositions-grid">
+                    
+                    <article class="proposition-card" data-id="1">
+                        <div class="proposition-header">
+                            <span class="proposition-number">1</span>
+                            <h3>Limitation à un seul mandat présidentiel</h3>
+                        </div>
+                        <div class="proposition-content">
+                            <p>Un président ne peut pas se représenter (un seul mandat possible)</p>
+                        </div>
+                        <div class="proposition-actions">
+                            <button class="btn-like" aria-label="Je suis pour">
+                                <span class="icon">👍</span>
+                                <span class="count" id="like-1">0</span>
+                            </button>
+                            <button class="btn-dislike" aria-label="Je suis contre">
+                                <span class="icon">👎</span>
+                                <span class="count" id="dislike-1">0</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="proposition-card" data-id="2">
+                        <div class="proposition-header">
+                            <span class="proposition-number">2</span>
+                            <h3>Programme chiffré obligatoire</h3>
+                        </div>
+                        <div class="proposition-content">
+                            <p>Un parti doit proposer 5 mesures chiffrées par domaine (écologie/sécurité/militaire/santé/etc), 
+                            ça évite les candidats qui disent « c'est notre projet » mais il n'y a pas de programme. 
+                            Ça force aussi les partis à sortir des vrais chiffres et pas juste des slogans simplistes.</p>
+                        </div>
+                        <div class="proposition-actions">
+                            <button class="btn-like" aria-label="Je suis pour">
+                                <span class="icon">👍</span>
+                                <span class="count" id="like-2">0</span>
+                            </button>
+                            <button class="btn-dislike" aria-label="Je suis contre">
+                                <span class="icon">👎</span>
+                                <span class="count" id="dislike-2">0</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="proposition-card" data-id="3">
+                        <div class="proposition-header">
+                            <span class="proposition-number">3</span>
+                            <h3>Bilan versus programme</h3>
+                        </div>
+                        <div class="proposition-content">
+                            <p>Un parti élu est jugé par son bilan versus son programme. Avec possibilité de jugement 
+                            si tromperie sur ce qui avait été annoncé et fait (en fait les mesures débats doivent avoir 
+                            été menées à l'assemblée nationale, l'issue des votes peut évidemment conditionner les résultats).</p>
+                        </div>
+                        <div class="proposition-actions">
+                            <button class="btn-like" aria-label="Je suis pour">
+                                <span class="icon">👍</span>
+                                <span class="count" id="like-3">0</span>
+                            </button>
+                            <button class="btn-dislike" aria-label="Je suis contre">
+                                <span class="icon">👎</span>
+                                <span class="count" id="dislike-3">0</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="proposition-card" data-id="4">
+                        <div class="proposition-header">
+                            <span class="proposition-number">4</span>
+                            <h3>Limitation de la concentration médiatique</h3>
+                        </div>
+                        <div class="proposition-content">
+                            <p>Les milliardaires ne peuvent pas posséder plus d'un média, quel que soit son secteur 
+                            (1 seul que ce soit web, papier, tv, radio). Donc disloquer les empires médiatiques actuels. 
+                            Contrôle par une autorité indépendante pour éviter qu'un milliardaire passe par des montages 
+                            ou autre pour contourner cela.</p>
+                        </div>
+                        <div class="proposition-actions">
+                            <button class="btn-like" aria-label="Je suis pour">
+                                <span class="icon">👍</span>
+                                <span class="count" id="like-4">0</span>
+                            </button>
+                            <button class="btn-dislike" aria-label="Je suis contre">
+                                <span class="icon">👎</span>
+                                <span class="count" id="dislike-4">0</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="proposition-card" data-id="5">
+                        <div class="proposition-header">
+                            <span class="proposition-number">5</span>
+                            <h3>Suppression de l'article 49.3</h3>
+                        </div>
+                        <div class="proposition-content">
+                            <p>Suppression des 49.3</p>
+                        </div>
+                        <div class="proposition-actions">
+                            <button class="btn-like" aria-label="Je suis pour">
+                                <span class="icon">👍</span>
+                                <span class="count" id="like-5">0</span>
+                            </button>
+                            <button class="btn-dislike" aria-label="Je suis contre">
+                                <span class="icon">👎</span>
+                                <span class="count" id="dislike-5">0</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="proposition-card" data-id="6">
+                        <div class="proposition-header">
+                            <span class="proposition-number">6</span>
+                            <h3>Plus de référendums</h3>
+                        </div>
+                        <div class="proposition-content">
+                            <p>Plus (+) de référendums</p>
+                        </div>
+                        <div class="proposition-actions">
+                            <button class="btn-like" aria-label="Je suis pour">
+                                <span class="icon">👍</span>
+                                <span class="count" id="like-6">0</span>
+                            </button>
+                            <button class="btn-dislike" aria-label="Je suis contre">
+                                <span class="icon">👎</span>
+                                <span class="count" id="dislike-6">0</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="proposition-card" data-id="7">
+                        <div class="proposition-header">
+                            <span class="proposition-number">7</span>
+                            <h3>Carnet de contrôle des dépenses des élus</h3>
+                        </div>
+                        <div class="proposition-content">
+                            <p>Un carnet de contrôle mesuré des dépenses en déplacements, réceptions et autres frais 
+                            des élus. Libre d'accès sur Internet que tous les citoyens puissent savoir en temps réel 
+                            les dépenses réalisées avec leurs contributions.</p>
+                        </div>
+                        <div class="proposition-actions">
+                            <button class="btn-like" aria-label="Je suis pour">
+                                <span class="icon">👍</span>
+                                <span class="count" id="like-7">0</span>
+                            </button>
+                            <button class="btn-dislike" aria-label="Je suis contre">
+                                <span class="icon">👎</span>
+                                <span class="count" id="dislike-7">0</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="proposition-card" data-id="8">
+                        <div class="proposition-header">
+                            <span class="proposition-number">8</span>
+                            <h3>Stage obligatoire pour les ministres</h3>
+                        </div>
+                        <div class="proposition-content">
+                            <p>Chaque ministre doit faire un stage d'un mois dans le secteur pour lequel il est nommé. 
+                            Donc prof, infirmier, etc OU avoir déjà exercé un métier dans le secteur dont il s'occupera.</p>
+                        </div>
+                        <div class="proposition-actions">
+                            <button class="btn-like" aria-label="Je suis pour">
+                                <span class="icon">👍</span>
+                                <span class="count" id="like-8">0</span>
+                            </button>
+                            <button class="btn-dislike" aria-label="Je suis contre">
+                                <span class="icon">👎</span>
+                                <span class="count" id="dislike-8">0</span>
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <h2>Proposer une nouvelle idée</h2>
+                <p class="contact-intro">
+                    Vous avez une idée pour améliorer la démocratie ? Partagez-la avec nous ! 
+                    Nous pourrons l'ajouter à notre liste de propositions.
+                </p>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Votre nom (optionnel)</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Votre email (optionnel)</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.fr">
+                    </div>
+                    <div class="form-group">
+                        <label for="proposition">Votre proposition *</label>
+                        <textarea id="proposition" name="proposition" rows="5" required 
+                                  placeholder="Décrivez votre proposition pour améliorer la démocratie..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Envoyer ma proposition</button>
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Améliorons la Démocratie. Initiative citoyenne transparente.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
