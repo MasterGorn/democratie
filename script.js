@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Validation
         if (!proposition) {
-            showFormMessage('Veuillez remplir le champ proposition.', 'error');
+            showFormMessage('Veuillez renseigner le champ "Votre proposition" pour pouvoir transmettre votre contribution.', 'error');
             return;
         }
 
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Afficher le message de succès
-        showFormMessage('Merci ! Votre proposition a été envoyée. Nous l\'examinerons et pourrions l\'ajouter à notre liste.', 'success');
+        showFormMessage('Votre proposition a été transmise avec succès. Elle sera examinée par notre équipe et pourra, après validation, être intégrée à notre liste de propositions soumises au débat public. Nous vous remercions de votre contribution au débat démocratique.', 'success');
 
         // Réinitialiser le formulaire
         contactForm.reset();

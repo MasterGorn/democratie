@@ -45,6 +45,23 @@ header {
     text-align: center;
     box-shadow: @shadow-md;
 
+    .header-illustration {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .header-image {
+            max-width: 300px;
+            max-height: 200px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+            opacity: 0.95;
+        }
+    }
+
     h1 {
         font-size: 2.5rem;
         margin-bottom: 0.5rem;
@@ -351,6 +368,15 @@ footer {
 // Responsive
 @media (max-width: 768px) {
     header {
+        .header-illustration {
+            margin-bottom: 1.5rem;
+
+            .header-image {
+                max-width: 200px;
+                max-height: 150px;
+            }
+        }
+
         h1 {
             font-size: 2rem;
         }
