@@ -146,18 +146,53 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Simuler l'envoi (dans un cas réel, vous enverriez à un serveur)
-        console.log('Nouvelle proposition reçue:', {
-            name: name || 'Anonyme',
-            email: email || 'Non renseigné',
-            proposition: proposition
-        });
+        // Préparer le contenu de l'email
+        const emailTo = 'meilleuredemocratie@gmail.com';
+        const emailSubject = encodeURIComponent('Nouvelle proposition - Améliorons la Démocratie');
+        
+        let emailBody = 'Bonjour,\n\n';
+        emailBody += 'Je souhaite proposer la mesure suivante pour améliorer la démocratie :\n\n';
+        emailBody += '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n';
+        
+        if (name) {
+            emailBody += 'Nom : ' + name + '\n';
+        } else {
+            emailBody += 'Nom : Anonyme\n';
+        }
+        
+        if (email) {
+            emailBody += 'Email : ' + email + '\n';
+        } else {
+            emailBody += 'Email : Non renseigné\n';
+        }
+        
+        emailBody += '\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n';
+        emailBody += 'Proposition :\n\n';
+        emailBody += proposition;
+        emailBody += '\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n';
+        emailBody += 'Cordialement,\n';
+        if (name) {
+            emailBody += name;
+        } else {
+            emailBody += 'Un citoyen';
+        }
 
-        // Afficher le message de succès
-        showFormMessage('Votre proposition a été transmise avec succès. Elle sera examinée par notre équipe et pourra, après validation, être intégrée à notre liste de propositions soumises au débat public. Nous vous remercions de votre contribution au débat démocratique.', 'success');
+        // Encoder le corps de l'email pour l'URL
+        const encodedBody = encodeURIComponent(emailBody);
 
-        // Réinitialiser le formulaire
-        contactForm.reset();
+        // Créer le lien mailto
+        const mailtoLink = `mailto:${emailTo}?subject=${emailSubject}&body=${encodedBody}`;
+
+        // Ouvrir le client email par défaut
+        window.location.href = mailtoLink;
+
+        // Afficher un message informatif
+        showFormMessage('Votre client email va s\'ouvrir. Veuillez vérifier que tous les champs sont correctement remplis avant d\'envoyer votre proposition. Merci de votre contribution au débat démocratique !', 'success');
+
+        // Réinitialiser le formulaire après un court délai
+        setTimeout(() => {
+            contactForm.reset();
+        }, 2000);
     });
 
     function showFormMessage(message, type) {
@@ -174,4 +209,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 8000);
     }
 });
-
